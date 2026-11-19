@@ -97,7 +97,17 @@ flowchart TD
 
 ---
 
-## 4. Bill of Materials (BOM)
+## 4. Hardware Schematic & Circuit Diagrams
+
+The complete single-sheet engineering schematic captures the mains input protection, offline flyback converter with TNY267PN, feedback optocoupler with Zener reference, secondary Schottky rectification and LC filtering, fixed post-regulators (+12V and +5V), and adjustable bipolar regulators (LM317 / LM337):
+
+![Benchtop SMPS Schematic Diagram](docs/images/schematic.png)
+
+📄 **[Open original schematic in full vector resolution (PDF)](SMPS-BENCH.pdf)**
+
+---
+
+## 5. Bill of Materials (BOM)
 
 ### Active Semiconductors & Integrated Circuits
 | Designator | Component | Description | Package |
@@ -146,10 +156,13 @@ flowchart TD
 
 ---
 
-## 5. Directory Structure
+## 6. Directory Structure
 
 ```text
 .
+├── docs/
+│   └── images/
+│       └── schematic.png        # High-resolution 180 DPI schematic rendering
 ├── SMPS-BENCH.sch               # Autodesk Eagle schematic
 ├── SMPS-BENCH.brd               # Autodesk Eagle 2-layer PCB layout
 ├── SMPS-BENCH.pdf               # Complete schematic and board documentation
@@ -162,7 +175,7 @@ flowchart TD
 
 ---
 
-## 6. Manufacturing & Assembly Guidelines
+## 7. Manufacturing & Assembly Guidelines
 
 1. **PCB Fabrication:**
    - **Layer Count:** 2-layer FR4.
@@ -178,14 +191,14 @@ flowchart TD
 
 ---
 
-## 7. Related Projects
+## 8. Related Projects
 
 - [**din-smps**](https://github.com/nagyjose/din-smps): DIN-rail modular power supply based on the same TNY267PN flyback topology with dual fixed rails (+12V & +5V).
 - [**F303-voltage-source**](https://github.com/nagyjose/linear-lab-power-supply): Microcontroller-driven (STM32F303) linear laboratory power supply with precision current/voltage feedback.
 
 ---
 
-## 8. License & Author
+## 9. License & Author
 
 - **Author:** Josef Nagy (`nagyjose`)
 - **Status:** Complete Hardware Design
